@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Audio Visual Separation through Text</title>
+  
+  <meta name="author" content="Reuben Tan">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!-- Bootstrap -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="template.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <table style="width:100%;max-width:1200px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name style="font-size:40px">Language-Guided Audio-Visual Source </name> <br>
+                <name style="font-size:40px">Separation via Trimodal Consistency</name>
+              </p>
+              <br></br>
+              <center>
+              <table id="people">
+		  <tr>
+		    <td>
+		      <p style="font-size:30px">Reuben Tan &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+        <td>
+		      <p style="font-size:30px">Arijit Ray &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+        <td>
+		      <p style="font-size:30px">Andrea Burns &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+		    <td>
+		      <p style="font-size:30px">Bryan A. Plummer &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+        
+		  </tr>
+      <tr>
+        <td>
+		      <p style="font-size:30px">Oriol Nieto &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+        <td>
+		      <p style="font-size:30px">Justin Salamon &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+        <td>
+		      <p style="font-size:30px">Bryan Russell &nbsp</p>
+		    </td>
+        <td>
+		      <p style="font-size:30px">Kate Saenko &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+      </tr>
+		</table>
+   
+              <p style="text-align:center">
+                <name style="font-size:20px">CVPR 2023</name>
+              </p>
+   
+              </center>
+              <br></br>
+              <center><img src="motivational_figure.png" alt="what image shows" height="600" width="600"></center>
+              <br></br>
+              <p style="font-size:20px">We propose a self-supervised approach for learning to perform audio source separation in videos based on natural language queries, using only unlabeled video and audio pairs as training data. A key challenge in this task is learning to associate the linguistic description of a sound-emitting object to its visual features and the corresponding components of the audio waveform, all without access to annotations during training. To overcome this challenge, we adapt off-the-shelf vision-language foundation models to provide pseudo-target supervision via two novel loss functions and encourage a stronger alignment between the audio, visual and natural language modalities. During inference, our approach can separate sounds given text, video and audio input, or given text and audio input alone. We demonstrate the effectiveness of our self-supervised approach on three audio-visual separation datasets, including MUSIC, SOLOS and AudioSet, where we outperform state-of-the-art strongly supervised approaches despite not using object detectors or text labels during training.  We provide a demo video that includes examples of audio-visual and audio-language separation on videos by our trained model in the wild.</a> 
+              </p>
+              <br></br>
+              <center>
+		  <a
+		  href="https://arxiv.org/abs/2110.10596" target="_blank" class="btn btn-danger" role="button">PDF</a>
+              </center>
+              <br></br>
+              <section>
+		<center> <h1 style="font-size:30px">AVSeT</h1></center>
+                <br></br>
+		<center><img src="forward_model_figure.png" alt="what image shows" height="200" width="400"></center>
+   <center><img src="consistency_loss.png" alt="what image shows" height="200" width="400"></center>
+   <center><img src="kl_loss.png" alt="what image shows" height="200" width="400"></center>
+                <br></br>
+                <p style="font-size:20px"> We present our unified AVSeT approach that learns to perform audio-visual and audio-language source separation from unlabeled videos alone.</p>
+                <br></br>
+               <center> <h1 style="font-size:30px">You can find the <a href=https://github.com/rxtan2/AVSeT>code</a> here.</h1></center>
+		</section> 
+              <p style="text-align:center">
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <div class="project-page">
+              <a name="refs"></a>
+              <h2>Reference</h2>
+              <p class="lead"> If you find this useful in your work please consider citing: </p>
+              <div class="highlight">
+              <pre> <code>      
+               @InProceedings{TanAVSet2023,
+         author={Reuben Tan and Arijit Ray and Andrea Burns and Bryan A. Plummer and Justin Salamon and Oriol Nieto and Bryan Russell and Kate Saenko},
+         title={Language-Guided Audio-Visual Source Separation via Trimodal Consistency},
+         booktitle={The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+         year={2023}} 
+              </code> </pre>
+              </div>
+          </div>
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script> -->
+
+</body>
+
+</html>
+
+

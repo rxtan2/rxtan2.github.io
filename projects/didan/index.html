@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>DIDAN</title>
+  
+  <meta name="author" content="Reuben Tan">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!-- Bootstrap -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="template.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <table style="width:100%;max-width:1200px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name style="font-size:40px">DIDAN: Detecting Cross-Modal Inconsistency to Defend Against Neural Fake News</name>
+              </p>
+              <br></br>
+              <center>
+              <table id="people">
+		  <tr>
+		    <td>
+		      <p style="font-size:30px">Reuben Tan &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+		    <td>
+		      <p style="font-size:30px">Bryan A. Plummer &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+		    <td>
+		      <p style="font-size:30px">Kate Saenko</p>
+		    </td>
+		  </tr>
+		</table>
+              </center>
+              <br></br>
+              <center><img src="Neural_News_Fig_1.jpg" alt="what image shows" height="300" width="600"></center>
+              <br></br>
+              <p style="font-size:20px">Large-scale dissemination of disinformation online intended to mislead or deceive the general population is a major societal problem. Rapid progression in image, video, and natural language generative models has only exacerbated this situation and intensified our need for an effective defense mechanism. While existing approaches have been proposed to defend against neural fake news, they are generally constrained to the very limited setting where articles only have text and metadata such as the title and authors. In this paper, we introduce the more realistic and challenging task of defending against machine-generated news that also includes images and captions. To identify the possible weaknesses that adversaries can exploit, we create a NeuralNews dataset composed of 4 different types of generated articles as well as conduct a series of human user study experiments based on this dataset. In addition to the valuable insights gleaned from our user study experiments, we provide a relatively effective approach based on detecting visual-semantic inconsistencies, which will serve as an effective first line of defense and a useful reference for future work in defending against machine-generated disinformation.</a>. 
+              </p>
+              <br></br>
+              <center>
+		  <a
+		  href="https://arxiv.org/abs/2009.07698" target="_blank" class="btn btn-danger" role="button">PDF</a>
+              </center>
+              <section>
+		<center> <h1 style="font-size:30px">NeuralNews Dataset</h1></center>
+                <br></br>
+		<p style="font-size:20px"> The NeuralNews dataset consists of human-generated and machine-generated articles. To obtain the human-generated articles, we build NeuralNews on top of the <a href="https://arxiv.org/abs/1904.01475">GoodNews</a> dataset, which is extracted from the New York Times. The <a href="https://arxiv.org/abs/1905.12616">Grover</a> model is used to generate articles using the human-generated titles and articles as context. To download the articles used in our experiments, you can do so using this <a href="https://drive.google.com/file/d/1yttGOSGvKQtPuLrJMJPByBlRfVQYisG1/view?usp=sharing">link</a>. To download the images, captions and metadata, please go to this <a href="https://github.com/furkanbiten/GoodNews">link</a> and follow the instructions to download the images and captions.</p>
+		</section>
+              <br></br>
+              <section>
+		<center> <h1 style="font-size:30px">DIDAN Model</h1></center>
+                <br></br>
+		<center><img src="model_figure.jpg" alt="what image shows" height="400" width="800"></center>
+                <br></br>
+                <p style="font-size:20px"> DIDAN is a multimodal model that accepts an article as well as its images and captions as inputs and predicts if it is human-generated or machine-generated. To determine the origin of an article, DIDAN seeks to detect visual-semantic inconsistency between the article and the image and caption. By incorporating article context into a visual-semantic representation computed from an image and a caption, it reasons about relationships between named entities present in the article and the image or caption. </p>
+                <br></br>
+               <center> <h1 style="font-size:30px">You can find the <a href=https://github.com/rxtan2/DIDAN/>code</a> here.</h1></center>
+		</section> 
+              <p style="text-align:center">
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <div class="project-page">
+              <a name="refs"></a>
+              <h2>Reference</h2>
+              <p class="lead"> If you find this useful in your work please consider citing: </p>
+              <div class="highlight">
+              <pre> <code> 
+                @InProceedings{tanDIDAN2020,
+		 author={Reuben Tan and Bryan A. Plummer and Kate Saenko},
+		 title={Detecting Cross-Modal Inconsistency to Defend Against Neural Fake News},
+		 booktitle={Empirical Methods in Natural Language Processing (EMNLP)},
+		 year={2020} }     
+              </code> </pre>
+              </div>
+          </div>
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script> -->
+
+</body>
+
+</html>
+
+

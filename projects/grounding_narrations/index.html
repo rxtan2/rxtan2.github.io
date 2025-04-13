@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Spatially Grounding Narrations</title>
+  
+  <meta name="author" content="Reuben Tan">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!-- Bootstrap -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="template.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <table style="width:100%;max-width:1200px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name style="font-size:40px">Look at What I am Doing: Self-Supervised Spatial Grounding of Narrations in Instructional Videos</name>
+              </p>
+              <br></br>
+              <center>
+              <table id="people">
+		  <tr>
+		    <td>
+		      <p style="font-size:30px">Reuben Tan &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+		    <td>
+		      <p style="font-size:30px">Bryan A. Plummer &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+		    <td>
+		      <p style="font-size:30px">Kate Saenko &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+        <td>
+		      <p style="font-size:30px">Hailin Jin &nbsp &nbsp &nbsp &nbsp</p>
+		    </td>
+        <td>
+		      <p style="font-size:30px">Bryan Russell &nbsp</p>
+		    </td>
+		  </tr>
+		</table>
+   
+              <p style="text-align:center">
+                <name style="font-size:20px">Advances in Neural Information Processing Systems (NeurIPS) 2021</name>
+              </p>
+   
+              </center>
+              <br></br>
+              <center><img src="motivation_figure.jpg" alt="what image shows" height="300" width="600"></center>
+              <br></br>
+              <p style="font-size:20px">We introduce the task of spatially localizing narrated interactions in videos. Key to our approach is the ability to learn to spatially localize interactions with self-supervision on a large corpus of videos with accompanying transcribed narrations. To achieve this goal, we propose a multilayer cross-modal attention network that enables effective optimization of a contrastive loss during training. We introduce adivided strategy that alternates between computing inter- and intra-modal attention across the visual and natural language modalities, which allows effective trainingvia directly contrasting the two modalities' representations. We demonstrate theeffectiveness of our approach by self-training on the HowTo100M instructional video dataset and evaluating on a newly collected dataset of localized described interactions in the YouCook2 dataset.  We show that our approach outperforms alternative baselines, including shallow co-attention and full cross-modal attention. We also apply our approach to grounding phrases in images with weak supervision on Flickr30K and show that stacking multiple attention layers is effective and, when combined with a word-to-region loss, achieves state of the art on recall-at-one and pointing hand accuracies.</a>. 
+              </p>
+              <br></br>
+              <center>
+		  <a
+		  href="https://arxiv.org/abs/2110.10596" target="_blank" class="btn btn-danger" role="button">PDF</a>
+              </center>
+              <section>
+		<center> <h1 style="font-size:30px">YouCook2-Interactions Dataset</h1></center>
+                <br></br>
+		<p style="font-size:20px"> The YouCook2-Interactions evaluation dataset contains frame-level bounding box annotations for described interactions in instructional cooking videos. It is built on top of the original <a href="http://youcook2.eecs.umich.edu/static/YouCookII/youcookii_readme.pdf">YouCook2</a> dataset, which contains temporal segment annotations. To download the YouCook2-Interactions dataset, you can do so using this <a href="https://drive.google.com/file/d/1yttGOSGvKQtPuLrJMJPByBlRfVQYisG1/view?usp=sharing">link</a>. We note that the videos in our dataset are sourced from the validation split of the YouCook2 dataset. 
+		</section>
+              <br></br>
+              <section>
+		<center> <h1 style="font-size:30px">Contrastive Multilayer Multimodal Attention Model (CoMMA)</h1></center>
+                <br></br>
+		<center><img src="combined_model_figure.png" alt="what image shows" height="400" width="800"></center>
+                <br></br>
+                <p style="font-size:20px"> To address the task of self-supervised spatial grounding of narrations in videos, we propose the Contrastive Multilayer Multimodal Attention (CoMMA) module. It comprises alternating bidirectional cross-modal and self-attention layers to encourage a fine-grained alignment between spatiotemporal and word features. Additionally, it is also model-agnostic and can be applied on top on any base visual and lanaguage encoders. </p>
+                <br></br>
+               <center> <h1 style="font-size:30px">You can find the <a href=https://github.com/rxtan2/video-grounding-narrations/>code</a> here.</h1></center>
+		</section> 
+              <p style="text-align:center">
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <div class="project-page">
+              <a name="refs"></a>
+              <h2>Reference</h2>
+              <p class="lead"> If you find this useful in your work please consider citing: </p>
+              <div class="highlight">
+              <pre> <code>      
+               @inproceedings{tanCOMMA2021,
+               author = {Reuben Tan and Bryan A. Plummer and Kate Saenko and Hailin Jin and Bryan Russell},
+               title = {Look at What Im Doing: Self-Supervised Spatial Grounding of Narrations in Instructional Videos},
+               booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+               year = {2021} } 
+              </code> </pre>
+              </div>
+          </div>
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script> -->
+
+</body>
+
+</html>
+
+
