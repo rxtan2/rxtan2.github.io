@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="VideoMosaic.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Koala</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="">
+  
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Koala: Key frame-conditioned long video-Large Language Model (LLM)</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://cs-people.bu.edu/rxtan/">Reuben Tan</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://cs-people.bu.edu/sunxm/">Ximeng Sun</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://feinanshan.github.io/">Ping Hu</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://juiwang.com/">Jui-Hsien Wang</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://research.adobe.com/person/hanieh-deilamsalehy/">Hanieh Deilamsalehy</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://bryanplummer.com/">Bryan A. Plummer</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://bryanrussell.org/">Bryan Russell</a><sup>3</sup>
+            </span>
+            <span class="author-block">
+              <a href="http://ai.bu.edu/ksaenko.html">Kate Saenko</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Boston University,</span>
+            <span class="author-block"><sup>2</sup>University of Electronic Science and Technology of China</span>
+            <span class="author-block"><sup>3</sup>Adobe Research</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2404.04346"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!--<span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>-->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/rxtan2/Koala-video-llm"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/spaces/rxtan/Global-Local-QFormer-Video-LLM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa-solid fa-laptop"></i>
+                  </span>
+                  <span>Huggingface Demo</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <img src="./teaser.png" alt="">
+          </div>
+        </div>
+        
+        <div class="content has-text-justified">
+          <p>
+            Long video question answering is a challenging task that involves recognizing short-term activities and reasoning about their fine-grained relationships. State-of-the-art video Large Language Models (vLLMs) hold promise as a viable solution due to their demonstrated emergent capabilities on new tasks. However, despite being trained on millions of short seconds-long videos, vLLMs are unable to understand minutes-long videos and accurately answer questions about them. To address this limitation, we propose a lightweight and self-supervised approach, Key frame-conditioned long video-LLM (Koala), that introduces learnable spatiotemporal queries to adapt pretrained vLLMs for generalizing to longer videos. Our approach introduces two new tokenizers that condition on visual tokens computed from sparse video key frames for understanding short and long video moments. We train our proposed approach on HowTo100M and demonstrate its effectiveness on zero-shot long video understanding benchmarks, where it outperforms state-of-the-art large models by 3 - 6% in absolute accuracy across all tasks. Surprisingly, we also empirically show that our approach not only helps a pretrained vLLM to understand long videos but also improves its accuracy on short-term action recognition.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!--<div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="./final_video.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>-->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3">Problem Overview</h2>
+    <div class="columns">
+      <div class="column">
+        <p>
+            We propose Koala,a novel and self-supervised approach that introduces spatiotemporal queries to adapt the frozen video tokenizer in pretrained vLLMs to aggregate spatiotemporal context over longer temporal horizons, in a top-down manner. Our main hypothesis is that the video tokenizer function in vLLMs, having learned to aggregate spatiotemporal context for a fixed number of frames, can generalize to understanding the global context of longer videos using the same number of input frames. More specifically, we first encode the global context of a long video by extracting the same number of input frames at a very coarse sampling rate, referred to as key frames. To mitigate the loss of fine-grained spatiotemporal information, we then extract a sequence of video segments at a higher rate to complement the global context with local spatiotemporal information.
+        </p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <img src="./model_overview.png" alt="">
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Sample summarization</h2>
+          <p>
+            <i>Koala</i> can be used to summarize long videos concisely.
+          </p>
+          <div class="column">
+        	<img src="./sample_summarization.png" alt="">
+      	  </div>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">Sample description</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Besides summarizing, <i>Koala</i> can also describe the temporal order of actions seen in a video.
+            </p>
+            <div class="column">
+        	<img src="./sample_description.png" alt="">
+      	  </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Here are some relevant work that are used as baselines in our experiments.
+          </p>
+          <p>
+            <a href="">MiniGPT4</a>
+          </p>
+          <p>
+            <a href="">Video-Llama</a>
+          </p>
+          <p>
+            <a href="">VideoGPT</a>
+          </p>
+	  <p>
+            <a href="">VideoChatGPT</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{TanKoala2024,
+  author    = {Reuben Tan and Ximeng Sun and Ping Hu and Jui-Hsien Wang and Hanieh Deilamsalehy and Bryan A. Plummer and Bryan Russell and Kate Saenko},
+  title     = {Koala: Key frame-conditioned long video-LLM},
+  journal   = {CVPR},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./cvpr_2023_vast.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/rxtan2" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The website template is copied from the following <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

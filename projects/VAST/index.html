@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Audio-Visual Separation through Text.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VAST: Video-Audio Separation through Text</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="">
+  
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Language-Guided Audio-Visual Source Separation via Trimodal Consistency</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://cs-people.bu.edu/rxtan/">Reuben Tan</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://arijitray1993.github.io/">Arijit Ray</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://cs-people.bu.edu/aburns4/">Andrea Burns</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://bryanplummer.com/">Bryan A. Plummer</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.justinsalamon.com/">Justin Salamon</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.urinieto.com/about/">Oriol Nieto</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://bryanrussell.org/">Bryan Russell</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="http://ai.bu.edu/ksaenko.html">Kate Saenko</a><sup>1,3</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Boston University,</span>
+            <span class="author-block"><sup>2</sup>Adobe Research</span>
+            <span class="author-block"><sup>3</sup>MIT-IBM Watson AI Lab, IBM Research</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2303.16342.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/rxtan2/AVSeT"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section>
+-->
+
+<!--
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <img src="./teaser.png" alt="">
+          </div>
+        </div>
+        
+        <div class="content has-text-justified">
+          <p>
+            We propose a self-supervised approach VAST: Video-Audio Separation through Text for learning to perform audio source separation in videos based on natural language queries, using only unlabeled video and audio pairs as training data. A key challenge in this task is learning to associate the linguistic description of a sound-emitting object to its visual features and the corresponding components of the audio waveform, all without access to annotations during training.
+          </p>
+          <p>
+            To overcome this challenge, we adapt off-the-shelf vision-language foundation models to provide pseudo-target supervision via two novel loss functions and encourage a stronger alignment between the audio, visual and natural language modalities.  
+   During inference, our approach can separate sounds given text, video and audio input, or given text and audio input alone. We demonstrate the effectiveness of our self-supervised approach on three audio-visual separation datasets, including MUSIC, SOLOS and AudioSet, where we outperform state-of-the-art strongly supervised approaches despite not using object detectors or text labels during training.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="./final_video.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3">Problem Overview</h2>
+    <div class="columns">
+      <div class="column">
+        <p>
+            We propose a unified approach that can jointly perform audio-visual and audio-text source separation. Existing audio-visual methods do not generalize to natural language queries due to their dependence on discrete object class labels. Furthermore, they assume the presence of prior knowledge of sounding objects and their locations in the form of preextracted bounding boxes during training and inference. To alleviate this dependence, our VAST approach leverages large vision-language foundation models to provide pseudo supervision.
+        </p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <img src="./approach_overview.png" alt="">
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Audio-Visual Separation</h2>
+          <p>
+            <i>VAST</i> can be used on raw videos to perform denoising of background sounds and localization of the input audio. The goal is to remove sounds of non-visible objects.
+          </p>
+          <video id="localization-example" autoplay controls muted loop playsinline height="100%">
+            <source src="./localize_example.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">Audio-Text Separation</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Despite not training with ground-truth text annotations, as a byproduct of our training approach, VAST can also separate audio sources based on natural language queries.
+            </p>
+            <video id="audio-text-example" controls playsinline height="100%">
+              <source src="./audio-text-example.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Here are some relevant work that are used as baselines in our experiments.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/1804.03160">Sound of Pixels</a> introduces the self-supervised mix-and-separate pretraining method to train an audio-visual separation model without ground-truth audio source annotations.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/1904.05979">Sound of Motions</a> leverages motion cues such as optical flow to improve audio-visual separation.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/1904.07750">Co-Separating Sounds of Visual Objects</a> introduces the idea to replace convolutional grid representations with object bounding boxes and their representations for audio-visual source separation.
+          </p>
+          <p>
+            <a href="https://arxiv.org/pdf/2109.11955.pdf">Visual Scene Graphs for Audio Source Separation</a> proposes to use a spatiotemporal scene graph over detected objects to aggregate contextual information between regions for more effective audio separation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{TanAVSet2023,
+  author    = {Reuben Tan and Arijit Ray and Andrea Burns and Bryan A. Plummer and Justin Salamon and Oriol Nieto and Bryan Russell and Kate Saenko},
+  title     = {Language-Guided Audio-Visual Source Separation via Trimodal Consistency},
+  journal   = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2023},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./cvpr_2023_vast.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/rxtan2" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The website template is copied from the following <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
